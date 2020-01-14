@@ -186,3 +186,6 @@ main {
 .reservering {
   cursor: pointer;
 }
+
+/* --- scroll effect --- */
+html{scroll-behavior: smooth;}
