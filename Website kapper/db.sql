@@ -10,8 +10,13 @@ GRANT ALL PRIVILEGES ON * . * TO 'kapper'@'localhost';
 
 CREATE TABLE afspraak (
     id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    naam VARCHAR(256) NOT NULL,
+    datum DATE NOT NULL,
+    tijdstip TIME NOT NULL,
+    kapper VARCHAR(256) NOT NULL,
+    firstname VARCHAR(256) NOT NULL,
+    lastname VARCHAR(256) NOT NULL,
     email VARCHAR(256) NOT NULL,
-    tijdstip DATETIME NOT NULL
+    behandeling VARCHAR(256) NOT NULL,
+    gender VARCHAR(1) NOT NULL
 
 );

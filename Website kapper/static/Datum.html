@@ -51,7 +51,7 @@
                 <option value="Melanie Brinkhaltes">Melanie Brinkhaltes</option>
             </select>
        </section>
- <table class="content-table" id="schemaTable">
+ <table class="content-table" id="schemaTable" name="Reservering-Table">
      <thead>
          <tr>
              <th colspan="2">
@@ -192,7 +192,7 @@
  </table>
  <div id="id01" class="modal">
   
-        <form class="modal-content animate" id="id01form" action="" method="">
+        <form class="modal-content animate" id="id01form" action="/afspraak" method="POST">
           <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
           </div>
@@ -211,7 +211,7 @@
             <br>
             
             <label for="behandeling"><b>Kies behandeling</b></label>
-            <select id="keuze-behandeling">
+            <select id="keuze-behandeling" name="behandeling">
               <option value="behandeling 1">Behandeling 1  €10,99</option>
               <option value="behandeling 2">Behandeling 2  €15,99</option>
               <option value="behandeling 3">Behandeling 3  €16,99</option>
@@ -221,10 +221,10 @@
             <br><br>
             <div id="gender-choice">
                 <label for="gender-male"><b>Male</b></label>
-                <input type="radio" name="gender-choice" value="choice-1" required>
+                <input type="radio" name="gender-choice" value="Male" required>
 
                 <label for="gender-female"><b>Female</b></label>
-                <input type="radio" name="gender-choice" value="choice-2" required>
+                <input type="radio" name="gender-choice" value="Female" required>
             </div>
               
             <button type="submit" class="resbtn">Reserveren</button>
