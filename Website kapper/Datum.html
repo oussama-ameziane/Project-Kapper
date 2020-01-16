@@ -44,11 +44,11 @@
      
        <section class="kapper">
            <label for="kapper">Door welke kapper wilt u behandeld worden?</label>
-           <select name="Kapper" id="kapper">
-                <option value="kapper 1">Marjan</option>
-                <option value="kapper 2">Jabber</option>
-                <option value="kapper 3">Frans</option>
-                <option value="kapper 4">Melanie Brinkhaltes</option>
+           <select name="Kapper" id="keuze-kapper">
+                <option value="Marjan">Marjan</option>
+                <option value="Jabber">Jabber</option>
+                <option value="Frans">Frans</option>
+                <option value="Melanie Brinkhaltes">Melanie Brinkhaltes</option>
             </select>
        </section>
  <table class="content-table" id="schemaTable">
@@ -199,31 +199,33 @@
       
           <div class="container">
             <label for="first-name"><b>First name</b></label>
-            <input type="text" placeholder="Enter name" name="first-name" required>
+            <input id="first-name" type="text" placeholder="Enter name" name="first-name" required>
       
             <label for="last-name"><b>Last name</b></label>
-            <input type="text" placeholder="Enter Last name" name="last-name" required>
+            <input id="last-name" type="text" placeholder="Enter Last name" name="last-name" required>
             
             
             <label for="email"><b>Email</b></label>
-            <input type="email" placeholder="Enter email" name="email" required>
+            <input id="email" type="email" placeholder="Enter email" name="email" required>
             
             <br>
             
             <label for="behandeling"><b>Kies behandeling</b></label>
-            <select>
-              <option value="behandeling 1">Behandeling 1</option>
-              <option value="behandeling 2">Behandeling 2</option>
-              <option value="behandeling 3">Behandeling 3</option>
-              <option value="behandeling 4">Behandeling 4</option>
+            <select id="keuze-behandeling">
+              <option value="behandeling 1">Behandeling 1  €10,99</option>
+              <option value="behandeling 2">Behandeling 2  €15,99</option>
+              <option value="behandeling 3">Behandeling 3  €16,99</option>
+              <option value="behandeling 4">Behandeling 4  €18,98</option>
             </select>
             
             <br><br>
-            <label for="gender-male"><b>Male</b></label>
-            <input type="radio" name="gender-choice" value="choice-1" required>
-            <label for="gender-female"><b>Female</b></label>
-            <input type="radio" name="gender-choice" value="choice-2" required>
-         
+            <div id="gender-choice">
+                <label for="gender-male"><b>Male</b></label>
+                <input type="radio" name="gender-choice" value="choice-1" required>
+
+                <label for="gender-female"><b>Female</b></label>
+                <input type="radio" name="gender-choice" value="choice-2" required>
+            </div>
               
             <button type="submit" class="resbtn">Reserveren</button>
           </div>
