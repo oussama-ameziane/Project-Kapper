@@ -199,12 +199,14 @@
       
           <div class="container">
             <label for="first-name"><b>First name</b></label>
-            <input id="first-name" type="text" placeholder="Enter name" name="first-name" required>
+            <input id="first-name" type="text" placeholder="Enter name" name="firstname" required>
       
             <label for="last-name"><b>Last name</b></label>
-            <input id="last-name" type="text" placeholder="Enter Last name" name="last-name" required>
+            <input id="last-name" type="text" placeholder="Enter Last name" name="lastname" required>
             
-            
+            <input type="hidden" name="tijdstip" id="tijdstipForm"/>
+            <input type="hidden" name="kapper" id="kapperForm"/>
+
             <label for="email"><b>Email</b></label>
             <input id="email" type="email" placeholder="Enter email" name="email" required>
             
@@ -221,10 +223,10 @@
             <br><br>
             <div id="gender-choice">
                 <label for="gender-male"><b>Male</b></label>
-                <input type="radio" name="gender-choice" value="Male" required>
+                <input type="radio" name="gender" value="Male" required>
 
                 <label for="gender-female"><b>Female</b></label>
-                <input type="radio" name="gender-choice" value="Female" required>
+                <input type="radio" name="gender" value="Female" required>
             </div>
               
             <button type="submit" class="resbtn">Reserveren</button>

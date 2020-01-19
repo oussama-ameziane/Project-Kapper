@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect
 import db
 
 app = Flask(__name__, static_folder='static', static_url_path='')
@@ -10,7 +10,8 @@ def afspraak_invoegen():
     print(data)
 
     db.execute_sql("INSERT INTO afspraak(datum, tijdstip, kapper, firstname, lastname, email, behandeling, gender) VALUES ('{}', '{}','{}', '{}', '{}', '{}', '{}', '{}')".format(data['datum'], data['tijdstip'], data['kapper'], data['firstname'], data['lastname'], data['email'], data['behandeling'], data['gender']))
-    return jsonify({'success': True}), 200, {'ContentType': 'application/json'}
+    return redirect("/Datum.html", code=302)
+    #return jsonify({'success': True}), 200, {'ContentType': 'application/json'}
 
 
 @app.route('/afspraken', methods= ['GET'])
