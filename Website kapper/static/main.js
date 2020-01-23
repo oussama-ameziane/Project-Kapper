@@ -31,23 +31,27 @@ $(function () {
     });
 });
 
-$(document).ready(function() {
+$(document).ready(function() 
+{
 
     $("#TheDate,#keuze-kapper").change(function() 
     {
-        $(".reservering").each(function(i, obj) {
+        $(".reservering").each(function(i, obj) 
+        {
             var ghettoTimeString = $(this).attr("id");
             var realTime = `${ghettoTimeString.slice(0, 2)}:${ghettoTimeString.slice(2)}`;
             var kapperValue = $("#keuze-kapper").val();
             var datumValue = $("#TheDate").val();
             var kokerGeileString = `metadata ${realTime}*${kapperValue}*${datumValue}`;
             var localItem = window.localStorage.getItem(kokerGeileString);
-            if(localItem !== null) {
+            if(localItem !== null) 
+            {
                 $(this).addClass('bg-danger');
                 $(this).removeClass('bg-success');
                 $(this).children('h2').text('GERESERVEERD');
             }
-            else {
+            else 
+            {
                 $(this).removeClass('bg-danger');
                 $(this).addClass('bg-success');
                 $(this).children('h2').text('BESCHIKBAAR');
